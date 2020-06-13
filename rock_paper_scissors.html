@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
+
+    <h1>Play Rock Paper Scissors</h1>
+    <p>Press F12.</p> 
+    <p>Type 'game()' for a 5 round game or 'playRound()'' for a quick game</p>
+
     <script>
+        
 
         let playerWinCount = 0;
         let computerWinCount = 0;
@@ -35,70 +41,48 @@
                 
                 console.log('Computer chose scissors, you win!');
                 playerWinCount++;
-                console.log('Player');
-                console.log(playerWinCount);
-                console.log('Computer');
-                console.log(computerWinCount);
+                console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
+                
            }
 
            else if (playerSelection == 'rock' && computerSelection == 'rock' ) {
                console.log(`Computer chose rock, it's a draw!`);
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);  
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount); 
             }
            
            else if (playerSelection == 'rock' && computerSelection == 'paper' ) {
                console.log(`Computer chose paper, you lose!`);
                computerWinCount++;
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
            }
            else if (playerSelection == 'paper' && computerSelection == 'scissors' ) {
                console.log(`Computer chose scissors, you lose!`);
                computerWinCount++;
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
            }
            else if (playerSelection == 'paper' && computerSelection == 'rock' ) {
                console.log(`Computer chose rock, you win!`);
                playerWinCount++;
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
                
             }                 
            else if (playerSelection == 'paper' && computerSelection == 'paper' ) {
                console.log(`Computer chose paper, it's a draw!`);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
            }
            else if (playerSelection == 'scissors' && computerSelection == 'paper' ) {
                console.log(`Computer chose paper, you win!`);
                playerWinCount++;
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
            }
            else if (playerSelection == 'scissors' && computerSelection == 'rock' ) {
                console.log(`Computer chose rock, you lose!`);
                computerWinCount++;
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
            }                 
            else {
                console.log(`Computer chose scissors, it's a draw!`);
-               console.log('Player');
-               console.log(playerWinCount);
-               console.log('Computer');
-               console.log(computerWinCount);
+               console.log('Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount);
            }
         }
 
@@ -110,12 +94,12 @@
             playRound();
             playRound();
             
-            if (playerWinCount>computerWinCount){
+            if (playerWinCount > computerWinCount){
                 console.log('Congratulations! Player Wins!')
                 console.log('Final Score, Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount)
             } 
             else if (computerWinCount>playerWinCount){
-                console.log('Hahaha, try harder!')
+                console.log('Hahaha, Computer Wins!. Please try harder!')
                 console.log('Final Score, Player: ' + playerWinCount + ' ' + 'Computer: ' + computerWinCount)
             }
             else {
